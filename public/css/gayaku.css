@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&family=Roboto&display=swap");
+/* override bootstrap display-5 */
+.display-99 {
+  font-family: "Roboto", sans-serif;
+  font-size: 7rem;
+  text-align: left;
+}
+
+.isi-konten {
+  font-family: "Questrial", sans-serif;
+  color: #181818;
+  line-height: 1.75rem;
+}
+
+.btn-danger {
+  background-color: orangered;
+  border-color: orangered;
+}
+
+#hero {
+  background-image: url("../img/pexels-carlos-oliva-3586966.jpg");
+  background-size: cover;
+  text-align: center;
+  padding: 15rem 0;
+  color: white;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px #181818;
+}
