@@ -9,14 +9,17 @@
 <hr>
 
 <table class="table table-bordered"  border=1 width="80%">
-   <tr>
+   <thead>
+      <tr>
       <th>Judul</th>
       <th>NIM Ketua</th>
       <th>Topik</th>
       <th>Deksripsi</th>
       <th>File Laporan</th>
-      <th>Aksi</th>
+      <th></th>
    </tr>
+   </thead>
+   
    @forelse ($logbooks as $log)
    <tr>
       <th>{{ $log->judul }}</th>
@@ -32,12 +35,14 @@
       
       </td>
       <td>
-            <a class="btn btn-success" type="button" href="{{ route('logbooks.edit', $log->id) }}">Edit</a> 
-            <br><br>
-            <form action="{{ route('logbooks.destroy', $log->id) }}" method="POST" onclick="confirm('yakin')">
-               @method('DELETE')
-               <button class="btn btn-danger type="submit">Delete</button>
-            </form>
+         <a class="btn btn-success" type="button" href="{{ route('logbooks.edit', $log->id) }}">Edit</a> 
+         <br><br>
+         <a></a>
+         <form action="{{ route('logbooks.destroy', $log->id) }}" method="POST" onclick="confirm('yakin')">
+            @csrf
+            @method('DELETE')
+            <a class="btn btn-danger type="submit">Delete</a>
+         </form>
       </td>
    </tr>
    @empty
