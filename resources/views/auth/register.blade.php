@@ -24,38 +24,37 @@
               </div>
           @endif
           <form action="{{ route('register') }}" method="POST">
-            <div class="form-register"> 
+            @csrf
+              <div class="form-register"> 
 
                 <div class="mb-3">
-                    <label for="minggu" class="form-label">Nama</label>
+                    <label for="nama" class="form-label">Nama</label>
                     <input type="text" class="form-control" name="name" placeholder="Nama" />
                 </div>
 
                 <div class="mb-3">
-                    <label for="topik" class="form-label">Email</label>
-                    <input type="text" class="form-control" name="email" placeholder="Email" />
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" placeholder="Email" />
                 </div>
 
                 <div class="mb-3">
                     <label for="topik" class="form-label">Password</label>
-                    <input type="text" class="form-control" name="password" placeholder="Password" />
+                    <input type="password" class="form-control" name="password" placeholder="Password" />
                 </div>
 
                 <div class="mb-3">
-                    <label for="topik" class="form-label">Konfirmasi Password</label>
-                    <input type="text" class="form-control" name="password_confirmation" placeholder="Konfirmasi Password" />
+                    <label for="konfirmasi_password" class="form-label">Konfirmasi Password</label>
+                    <input type="password" class="form-control" name="password_confirmation" placeholder="Konfirmasi Password" />
                 </div>
 
                 <div class="mb-3">
-                    <label for="prodi" class="form-label">Role</label>
-                    <select class="form-select" aria-label="Default select example">
-                    <option value="1">Dosen</option>
-                    <option value="2">Mahasiswa</option>
+                    <label for="role" class="form-label">Role</label>
+                    <select class="form-select" aria-label=select name="role">
+                    <option value="1">Mahasiswa</option>
+                    <option value="2">Dosen</option>
                     </select>
                 </div>
-
-                <button class="btn-registrasi btn-success" type="submit">Simpan</button>
-
+              <button class="btn-registrasi btn-success" type="submit">Simpan</button>
             </div>
           </form> 
         </section>

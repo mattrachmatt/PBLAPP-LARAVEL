@@ -41,7 +41,7 @@
             <button class="btn-login" type="submit">Sign In</button>
           </div>
         </form>
-        <!-- Belum punya akun?? <a href="{{ route('register') }}">Registrasi disini</a> -->
+        Belum punya akun?? <a href="{{ route('register') }}">Registrasi disini</a>
       </div>
     </div>
   </body>
