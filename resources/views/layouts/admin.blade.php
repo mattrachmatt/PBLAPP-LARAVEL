@@ -24,7 +24,7 @@
 </nav> -->
 
 <!-- new navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light bordered-dark justify-content-around shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light bordered-dark justify-content-around shadow-sm sticky-top">
         <!-- navigasi -->
     <div class="container">
       <a class="navbar-brand" href="#"> 
@@ -59,10 +59,10 @@
    <div class="container" style="min-height: 2rem">
    </div>
     @yield('kontenku')
-  </div>
+   </div>
 
 
-<footer class="bg-light border-dark mt-lg-5 text-dark p-1 text-center sticky-bottom">2022 &copy Template By Mr. Idris</footer>
+<footer id="sticky-footer" class="flex-shrink bg-light border-dark mt-lg-5 text-dark p-1 text-center fixed-bottom">2022 &copy Template By Mr. Idris</footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"crossorigin="anonymous"></script>
 
 <!-- <form action="{{ route('logout') }}" method="POST">

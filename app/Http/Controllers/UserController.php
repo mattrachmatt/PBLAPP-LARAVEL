@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\User;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Gate;
@@ -18,7 +20,10 @@ class UserController extends Controller
             abort(403);
         }
 
-        return view('users.index');
+        $users = User::all();
+        return view('users.index', compact('users'));
+
+        // return view('users.index');
     }
 
     /**
@@ -39,7 +44,16 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = new User;
+
+        $user->nama = $request->nama;
+        $user->email = $request->email;
+        $user->role = $request->role;
+
+        $user->save();
+        
+        return redirect()->route('users.index');
+
     }
 
     /**
@@ -73,7 +87,14 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = new User;
+
+        $user->nama = $request->nama;
+        $user->email = $request->email;
+        $user->role = $request->role;
+
+        $user->save();
+        return redirect()->route('users.index');
     }
 
     /**
@@ -83,7 +104,11 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
-        //
+    {  
+        $user = User::find($id);
+
+        $user->delete();
+
+        return redirect()->route('users.index');
     }
 }

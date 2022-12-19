@@ -41,7 +41,7 @@
          <form action="{{ route('logbooks.destroy', $log->id) }}" method="POST" onclick="confirm('yakin')">
             @csrf
             @method('DELETE')
-            <a class="btn btn-danger type="submit">Delete</a>
+            <button class="btn btn-danger type="submit">Delete</button>
          </form>
       </td>
    </tr>
@@ -52,6 +52,7 @@
 
 <hr>
 <a class="btn btn-primary mx-right" href="{{ route('logbooks.create') }}">Insert Data</a>
+
 
 
 @endsection
